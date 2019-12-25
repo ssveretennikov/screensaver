@@ -11,7 +11,7 @@ import java.util.Random;
 public class Config {
 
     @Bean
-    @Scope("prototype")
+    @Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)
     public Color color(){
 
         Random random = new Random();
@@ -27,7 +27,7 @@ public class Config {
 
         while (true){
             context.getBean(ColorFrame.class).showOnRandomPlace();
-            Thread.sleep(50);
+            Thread.sleep(500);
         }
 
     }
