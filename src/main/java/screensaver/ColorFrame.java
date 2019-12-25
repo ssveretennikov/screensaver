@@ -9,7 +9,6 @@ import java.awt.*;
 import java.util.Random;
 
 @Service
-@Scope("prototype")
 public class ColorFrame extends JFrame {
 
     @Autowired
